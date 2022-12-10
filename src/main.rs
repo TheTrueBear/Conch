@@ -1,6 +1,9 @@
 
+/* Modules */
 mod token;
 
+/* Run the code */
 fn main() {
-    println!("Hello, world!");
+    let tok = token::new(1, "Bear".to_string());
+    println!("{}", tok.repr());
 }
