@@ -1,9 +1,13 @@
 
 /* Modules */
-mod token;
+mod lexer;
+
+/* Uses */
+use std::env;
 
 /* Run the code */
 fn main() {
-    let tok = token::new(1, "Bear".to_string());
-    println!("{}", tok.repr());
+    // Get the arguments
+    let args: Vec<String> = env::args().collect();
+    dbg!(args);
 }
