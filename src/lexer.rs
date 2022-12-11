@@ -31,7 +31,9 @@ impl Lexer {
         let tokens: Vec<token::Token> = Vec::new();
 
         // Tokenize the text
-        self.advance();
+        while self.cc != String::new() {
+
+        }
 
         // Return the tokens
         return tokens;
