@@ -21,7 +21,7 @@ fn main() {
     let text = "1 + 2".to_string();
 
     // Create the lexer
-    let lexer = lexer::new(text);
+    let mut lexer = lexer::new(text);
     let tokens = lexer.tokenize();
     println!("{}", tokens.len());
 }

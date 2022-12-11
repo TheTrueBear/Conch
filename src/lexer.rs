@@ -2,21 +2,36 @@
 /* Lexer class */
 pub struct Lexer {
     text: String,
-    cc: u64
+    cc: String,
+    i: u64
 }
 
 /* Initialize a lexer */
 pub fn new(text: String) -> Lexer {
-    return Lexer {text: text, cc: 0};
+    return Lexer {text: text, cc: "".to_string(), i: 0};
 }
 
 /* Lexer functions */
 impl Lexer {
-    pub fn tokenize(&self) -> Vec<token::Token> {
+
+    // Set the character of the lexer that it is on
+    fn set_char(&mut self) {
+        self.cc = "1".to_string();
+    }
+
+    // Advance to the next character
+    fn advance(&mut self) {
+        self.i += 1;
+        self.set_char();
+    }
+
+    // Function to tokenize a string
+    pub fn tokenize(&mut self) -> Vec<token::Token> {
         // Initialize a list of the tokens
         let tokens: Vec<token::Token> = Vec::new();
 
         // Tokenize the text
+        self.advance();
 
         // Return the tokens
         return tokens;
