@@ -9,5 +9,19 @@ use std::env;
 fn main() {
     // Get the arguments
     let args: Vec<String> = env::args().collect();
-    dbg!(args);
+
+    // Get if it is a file or the shell
+    if args.len() == 1 {
+        println!("Shell");
+    } else {
+        println!("File");
+    }
+
+    // Make the text
+    let text = "1 + 2".to_string();
+
+    // Create the lexer
+    let lexer = lexer::new(text);
+    let tokens = lexer.tokenize();
+    println!("{}", tokens.len());
 }

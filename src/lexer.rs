@@ -12,9 +12,15 @@ pub fn new(text: String) -> Lexer {
 
 /* Lexer functions */
 impl Lexer {
-    // pub fn tokenize(&self) -> Vec<token::Token> {
-    //     return Vec::new();
-    // }
+    pub fn tokenize(&self) -> Vec<token::Token> {
+        // Initialize a list of the tokens
+        let tokens: Vec<token::Token> = Vec::new();
+
+        // Tokenize the text
+
+        // Return the tokens
+        return tokens;
+    }
 }
 
 /* Token module */
